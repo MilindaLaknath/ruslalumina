@@ -37,99 +37,99 @@ and open the template in the editor.
                 <center><h2>|Alumni  Tracer System|</h2></center>
             </div>
             <div class="panel-body">
-                <form method="post" action="" role="form">
+                <form method="post" action="../src/addData.php" role="form">
                     <h3>Student Details</h3>
                     <div class="form-group">
                         <lable for="surname">Surname</lable>
-                        <input type="text" class="form-control" id="surname" required="required" placeholder="Enter Surename" >
+                        <input type="text" class="form-control" id="surname" name="surname" required="required" placeholder="Enter Surename" >
                     </div>
                     <div class="form-group">
-                        <lable for="othername">Other Name</lable>
-                        <input type="text" class="form-control" id="othername" required="required" placeholder="Enter Other Name" >
+                        <lable for="othername">Other Names</lable>
+                        <input type="text" class="form-control" id="othername" name="othername"  required="required" placeholder="Enter Other Name" >
                     </div>
                     <div class="form-group">
                         <lable for="Initials">Name With Initials</lable>
-                        <input type="text" class="form-control" id="Initials" required="required" placeholder="Enter Name With Initials" >
+                        <input type="text" class="form-control" id="Initials" name="initials"  required="required" placeholder="Enter Name With Initials" >
                     </div>
                     <lable>Gender</lable>   
                     <div class="radio">
                         <label>
-                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                            <input type="radio" name="gender" id="optionsRadios1" value="Male" checked>
                             Male
                         </label>
                         <label>
-                            <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                            <input type="radio" name="gender" id="optionsRadios2" value="Female">
                             Female
                         </label>
                     </div> 
                     <div class="form-group">
                         <lable for="Birthday">Date of Birthday</lable>
-                        <input type="date" class="form-control" id="Birthday" required="required"  >
+                        <input type="date" class="form-control" id="Birthday" name="birthday"  required="required"  >
                     </div>
 
                     <h3>University Details</h3>
                     <div class="form-group">
                         <lable for="Regsterd">Registration Number</lable>
-                        <input type="text" class="form-control" id="Regsterd" required="required" placeholder="ICT/2011/2012/001" >
+                        <input type="text" class="form-control" id="Regsterd" name="regsterd" required="required" placeholder="ICT/2011/2012/001" >
                     </div>
                     <label>Department</label>
-                    <select class="selectpicker" id="Department">
-                        <option>Physical Sciences</option>
-                        <option>Biological Sciences</option>
+                    <select class="selectpicker" id="Department" name="department">
+                        <option value="Physical Sciences">Physical Sciences</option>
+                        <option value="Biological Sciences">Biological Sciences</option>
                     </select>
                     <br> <br> <label>Degree</label>
-                    <select class="selectpicker" id="Degreee">
-                        <option>B.Sc.degree in Applied Sciences</option>
-                        <option>B.Sc.degree in Information & Communication Technology</option>
-                        <option>B.Sc.degree in Applied Biology</option>
-                        <option>B.Sc.degree in Health Promotion</option>
+                    <select class="selectpicker" id="Degree" name="degree">
+                        <option value="B.Sc.degree in Applied Sciences">B.Sc.degree in Applied Sciences</option>
+                        <option value="B.Sc.degree in Information & Communication Technology">B.Sc.degree in Information & Communication Technology</option>
+                        <option value="B.Sc.degree in Applied Biology">B.Sc.degree in Applied Biology</option>
+                        <option value="B.Sc.degree in Health Promotion">B.Sc.degree in Health Promotion</option>
                     </select>
                     <br><br><label>Degree Duration</label>
-                    <select class="selectpicker" id="Duration">
-                        <option>Three Year</option>
-                        <option>Four Year</option>
+                    <select class="selectpicker" id="Duration" name="duration">
+                        <option value="Three Year">Three Year</option>
+                        <option value="Four Year">Four Year</option>
                     </select>
                     <h3>Employee Details</h3>
                     <div class="form-group">
                         <lable for="Organization">Organization</lable>
-                        <input type="text" class="form-control" id="Organization" required="required" placeholder="Enter Name" >
+                        <input type="text" class="form-control" id="Organization" name="organization" required="required" placeholder="Enter Name" >
                     </div>
                     <div class="form-group">
                         <lable for="Designation">Designation</lable>
-                        <input type="text" class="form-control" id="Designation" required="required" placeholder="Enter Name" >
+                        <input type="text" class="form-control" id="Designation" name="designation" required="required" placeholder="Enter Name" >
                     </div>
                     <div class="form-group">
                         <lable for="OrganizationAdd">Organization Address</lable>
-                        <textarea class="form-control" id="OrganizationAdd" rows="8" placeholder="Enter Organization Address" required="required"></textarea>
+                        <textarea class="form-control" id="OrganizationAdd" name="organizationAdd" rows="8" placeholder="Enter Organization Address" required="required"></textarea>
                     </div>
                     <div class="form-group">
                         <lable for="OrganizationTelephone">Organization Telephone Number</lable>
-                        <input type="number" class="form-control" id="OrganizationTelephone" required="required" placeholder="Enter Organization Telephone Number" >
+                        <input type="number" class="form-control" id="OrganizationTelephone" name="organizationTelephone" required="required" placeholder="Enter Organization Telephone Number" >
                     </div>
                     <label>Starting Salary</label>
-                    <select class="selectpicker" id="Salary">
-                        <option>20,000-30,000</option>
-                        <option>30,000-50,000</option>
-                        <option>50,000-75,000</option>
-                        <option>75,000-100,000</option>
-                        <option>100,000< above </option>
+                    <select class="selectpicker" id="Salary" name="salary">
+                        <option value="20,000-30,000">20,000-30,000</option>
+                        <option value="30,000-50,000">30,000-50,000</option>
+                        <option value="50,000-75,000">50,000-75,000</option>
+                        <option value="75,000-100,000">75,000-100,000</option>
+                        <option value="100,000< above">100,000< above </option>
                     </select>
                     <div class="form-group">
                         <lable for="CurrentSalary">Current Salary</lable>
-                        <input type="number" class="form-control" id="CurrentSalary" required="required" placeholder="Enter Current Salary" >
+                        <input type="number" class="form-control" id="CurrentSalary" name="currentSalary" required="required" placeholder="Enter Current Salary" >
                     </div>
                     <h3>Contact Details</h3>
                     <div class="form-group">
                         <lable for="PermanentAddress">Permanent Address</lable>
-                        <textarea class="form-control" id="PermanentAddress" rows="8" placeholder="Enter Permanent Address" required="required"></textarea>
+                        <textarea class="form-control" id="PermanentAddress" name="permanentAddress" rows="8" placeholder="Enter Permanent Address" required="required"></textarea>
                     </div>
                     <div class="form-group">
                         <lable for="Email">Email</lable>
-                        <input type="email" class="form-control" id="Email" required="required" placeholder="Enter Email" >
+                        <input type="email" class="form-control" id="Email" name="email" required="required" placeholder="Enter Email" >
                     </div>
                     <div class="form-group">
                         <lable for="ContactNumber">Contact Number</lable>
-                        <input type="number" class="form-control" id="ContactNumber" required="required" placeholder="Enter Contact Number" >
+                        <input type="number" class="form-control" id="ContactNumber" name="contactNumber" required="required" placeholder="Enter Contact Number" >
                     </div>
                     <center><button type="submit" class="btn btn-default">Submit</button>
                         <button type="reset" class="btn btn-default">Reset</button>
