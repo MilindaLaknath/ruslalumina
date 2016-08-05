@@ -6,7 +6,7 @@
  * and open the template in the editor.
  */
 
-require_once './db.php';
+require_once 'db.php';
 
 
 $sname = (isset($_POST['surname']) ? $_POST['surname'] : '');
@@ -35,18 +35,14 @@ $query = "INSERT INTO stdDetails (sname, oname, nameins, gender, dob, regNo, "
         . "('" . $sname . "','" . $oname . "','" . $nameins . "','" . $gender . "','" . $dob . "','" . $regNo . "',"
         . "'" . $department . "','" . $degree . "','" . $duration . "','" . $organization . "','" . $designation . "',"
         . "'" . $orgAddress . "','" . $orgTpNo . "','" . $salaryStr . "','" . $salaryCur . "','" . $perAddress . "',"
-        . "'" . $email . "','" . $contact . "',)";
+        . "'" . $email . "','" . $contact . "')";
 
 
 if (mysqli_query($conn, $query)) {
     echo "New record created successfully.";
     mysqli_close($conn);
-    header('Location: http://localhost/AluminaProject/private_html/');
+    header('Location: http://localhost/AluminaProject/public_html/');
 } else {
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     mysqli_close($conn);
 }
-
-
-
-
