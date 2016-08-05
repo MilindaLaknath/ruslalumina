@@ -131,8 +131,8 @@ and open the template in the editor.
                                 <textarea class="form-control" id="Capacity" name="capacity" rows="4" placeholder="Job Description" required="required"></textarea>
                             </div>
                             <div class="form-group">
-                                <lable for="Relevant">Job Relevant of the Degree Obtained From RUSL</lable>
-                                <textarea class="form-control" id="Relevant" name="relevant" rows="5"  required="required" placeholder="Comment"></textarea>
+                                <lable for="Relevant">Job Relevance of the Degree Obtained From RUSL</lable>
+                                <textarea class="form-control" id="Relevance" name="relevance" rows="5"  required="required" placeholder="Comment"></textarea>
                             </div>
                         </div>
                         <div class="col-lg-6" >

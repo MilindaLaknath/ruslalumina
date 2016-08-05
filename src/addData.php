@@ -17,9 +17,12 @@ $dob = (isset($_POST['birthday']) ? $_POST['birthday'] : '');
 $regNo = (isset($_POST['regsterd']) ? $_POST['regsterd'] : '');
 $department = (isset($_POST['department']) ? $_POST['department'] : '');
 $degree = (isset($_POST['degree']) ? $_POST['degree'] : '');
-$duration = (isset($_POST['duration']) ? $_POST['duration'] : '');
+$admission = (isset($_POST['admission']) ? $_POST['admission'] : '');
+$graduation = (isset($_POST['graduation']) ? $_POST['graduation'] : '');
 $organization = (isset($_POST['organization']) ? $_POST['organization'] : '');
 $designation = (isset($_POST['designation']) ? $_POST['designation'] : '');
+$capacity = (isset($_POST['capacity']) ? $_POST['capacity'] : '');
+$relevance = (isset($_POST['relevance']) ? $_POST['relevance'] : '');
 $orgAddress = (isset($_POST['organizationAdd']) ? $_POST['organizationAdd'] : '');
 $orgTpNo = (isset($_POST['organizationTelephone']) ? $_POST['organizationTelephone'] : '');
 $salaryStr = (isset($_POST['salary']) ? $_POST['salary'] : '');
@@ -27,15 +30,16 @@ $salaryCur = (isset($_POST['currentSalary']) ? $_POST['currentSalary'] : '');
 $perAddress = (isset($_POST['permanentAddress']) ? $_POST['permanentAddress'] : '');
 $email = (isset($_POST['email']) ? $_POST['email'] : '');
 $contact = (isset($_POST['contactNumber']) ? $_POST['contactNumber'] : '');
+$information = (isset($_POST['information']) ? $_POST['information'] : '');
 
 
-$query = "INSERT INTO stdDetails (sname, oname, nameins, gender, dob, regNo, "
-        . "department, degree, duration, organization, designation, orgAddress, "
-        . "orgTpNo, salaryStr, salaryCur, perAddress, email, contact) VALUES "
+$query = "INSERT INTO stdDetails (ssurname, othername, initials, gender, dob, regNo, department, degree, admission, "
+        . "graduation, organization, designation, capacity, relevance, orgAddress, orgTpNo, salary, currentSalary, "
+        . "perAddress, email, contact, information) VALUES "
         . "('" . $sname . "','" . $oname . "','" . $nameins . "','" . $gender . "','" . $dob . "','" . $regNo . "',"
-        . "'" . $department . "','" . $degree . "','" . $duration . "','" . $organization . "','" . $designation . "',"
-        . "'" . $orgAddress . "','" . $orgTpNo . "','" . $salaryStr . "','" . $salaryCur . "','" . $perAddress . "',"
-        . "'" . $email . "','" . $contact . "')";
+        . "'" . $department . "','" . $degree . "','" . $admission. "','" . $graduation. "','" . $organization . "',"
+        . "'" . $designation . "','" . $capacity. "','" . $relevance. "','" . $orgAddress . "','" . $orgTpNo . "',"
+        . "'" . $salaryStr . "','" . $salaryCur . "','" . $perAddress . "','" . $email . "','" . $contact . "','" . $information. "',)";
 
 
 if (mysqli_query($conn, $query)) {
