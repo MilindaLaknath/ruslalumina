@@ -27,7 +27,8 @@ and open the template in the editor.
                     <div class="container">
                         <center>
                             <img src="main.png" alt="RUSL LOGO" height="180" width="140"/>
-                            <h1>Rajarata University of Sri Lanka</h1><h2><big>RUSL</big></h2> <h2>Faculty of Applied Sciences</h2></center>
+                            <h1>Rajarata University of Sri Lanka</h1><h2><big>RUSL</big></h2> <h2>Faculty of Applied Sciences</h2>
+                        </center>
                     </div>
                 </div>
             </div>
@@ -38,7 +39,7 @@ and open the template in the editor.
             </div>
             <div class="panel-body">
                 <form method="post" action="../src/addData.php" role="form">
-                    
+
                     <h3>Student Details</h3>
                     <div class="col-lg-12" style="margin-bottom: 10px;">
                         <div class="col-lg-6" >
@@ -56,16 +57,18 @@ and open the template in the editor.
                             </div>
                         </div>
                         <div class="col-lg-6" >
-                            <lable>Gender</lable>
-                            <div class="radio">
-                                <label>
-                                    <input type="radio" name="gender" id="optionsRadios1" value="Male" checked>
-                                    Male
-                                </label>
-                                <label>
-                                    <input type="radio" name="gender" id="optionsRadios2" value="Female">
-                                    Female
-                                </label>
+                            <div class="form-group">
+                                <lable>Gender</lable>
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="gender" id="optionsRadios1" value="Male" checked>
+                                        Male
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="gender" id="optionsRadios2" value="Female">
+                                        Female
+                                    </label>
+                                </div>
                             </div>
                             <div class="form-group">
                                 <lable for="Birthday">Date of Birth</lable>
@@ -73,35 +76,39 @@ and open the template in the editor.
                             </div>
                         </div>
                     </div>
-                    
+
                     <h3>University Details</h3>
                     <div class="col-lg-12" style="margin-bottom: 10px;" >
                         <div class="col-lg-6" >
                             <div class="form-group">
-                                <lable for="Regsterd">Registration Number</lable>
+                                <lable for="regsterd">Registration Number</lable>
                                 <input type="text" class="form-control" id="Regsterd" name="regsterd" required="required" placeholder="ICT/2011/2012/001" >
                             </div>
-                            <label>Department</label>
-                            <select class="selectpicker" id="Department" name="department">
-                                <option value="Physical Sciences">Physical Sciences</option>
-                                <option value="Biological Sciences">Biological Sciences</option>
-                            </select>
-                            <br> <br> <label>Degree</label>
-                            <select class="selectpicker" id="Degree" name="degree">
-                                <option value="B.Sc.(General) Degree in Applied Sciences">B.Sc.(General) Degree in Applied Sciences</option>
-                                <option value="B.Sc.(four-year) Degree in Applied Sciences">B.Sc.(four-year) Degree in Applied Sciences</option>
-                                <option value="B.Sc.(four-year) Degree in Industrial Mathematics">B.Sc.(four-year) Degree in Industrial Mathematics</option>
-                                <option value="B.Sc.(General) Degree in Information & Communication Technology">B.Sc.(General) Degree in Information & Communication Technology</option>
-                                <option value="B.Sc.(four-year) Degree in Information & Communication Technology">B.Sc.(four-year) Degree in Information & Communication Technology</option>
-                                <option value="B.Sc.(Special-Biodiversity Conservation) Degree in Applied Biology">B.Sc.(Special-Biodiversity Conservation) Degree in Applied Biology</option>
-                                <option value="B.Sc.(Special-Microbiology) Degree in Applied Biology">B.Sc.(Special-Microbiology) Degree in Applied Biology</option>
-                                <option value="B.Sc.(Special-Fisheries and Aquaculture Management) Degree in Applied Biology">B.Sc.(Special-Fisheries and Aquaculture Management) Degree in Applied Biology</option>
-                                <option value="B.Sc.(Joint Major) Degree in Biology and Physics">B.Sc.(Joint Major) Degree in Biology and Physics</option>
-                                <option value="B.Sc.(Joint Major) Degree in Chemistry and Physics">B.Sc.(Joint Major) Degree in Chemistry and Physics</option>
-                                <option value="B.Sc.(Special) Degree in Chemistry">B.Sc.(Special) Degree in Chemistry</option>
-                                <option value="B.Sc.(General) Degree in Health Promotion">B.Sc.(General) Degree in Health Promotion</option>
-                                <option value="B.Sc.(Special) Degree in Health Promotion">B.Sc.(Special) Degree in Health Promotion</option>
-                            </select>
+                            <div class="form-group">
+                                <label for="Department">Department</label>
+                                <select class="selectpicker" id="Department" name="department">
+                                    <option value="Physical Sciences">Physical Sciences</option>
+                                    <option value="Biological Sciences">Biological Sciences</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="Degree">Degree</label>
+                                <select class="selectpicker" id="Degree" name="degree">
+                                    <option value="B.Sc.(General) Degree in Applied Sciences">B.Sc.(General) Degree in Applied Sciences</option>
+                                    <option value="B.Sc.(four-year) Degree in Applied Sciences">B.Sc.(four-year) Degree in Applied Sciences</option>
+                                    <option value="B.Sc.(four-year) Degree in Industrial Mathematics">B.Sc.(four-year) Degree in Industrial Mathematics</option>
+                                    <option value="B.Sc.(General) Degree in Information & Communication Technology">B.Sc.(General) Degree in Information & Communication Technology</option>
+                                    <option value="B.Sc.(four-year) Degree in Information & Communication Technology">B.Sc.(four-year) Degree in Information & Communication Technology</option>
+                                    <option value="B.Sc.(Special-Biodiversity Conservation) Degree in Applied Biology">B.Sc.(Special-Biodiversity Conservation) Degree in Applied Biology</option>
+                                    <option value="B.Sc.(Special-Microbiology) Degree in Applied Biology">B.Sc.(Special-Microbiology) Degree in Applied Biology</option>
+                                    <option value="B.Sc.(Special-Fisheries and Aquaculture Management) Degree in Applied Biology">B.Sc.(Special-Fisheries and Aquaculture Management) Degree in Applied Biology</option>
+                                    <option value="B.Sc.(Joint Major) Degree in Biology and Physics">B.Sc.(Joint Major) Degree in Biology and Physics</option>
+                                    <option value="B.Sc.(Joint Major) Degree in Chemistry and Physics">B.Sc.(Joint Major) Degree in Chemistry and Physics</option>
+                                    <option value="B.Sc.(Special) Degree in Chemistry">B.Sc.(Special) Degree in Chemistry</option>
+                                    <option value="B.Sc.(General) Degree in Health Promotion">B.Sc.(General) Degree in Health Promotion</option>
+                                    <option value="B.Sc.(Special) Degree in Health Promotion">B.Sc.(Special) Degree in Health Promotion</option>
+                                </select>
+                            </div>
                         </div>
                         <div class="col-lg-6" >
                             <div class="form-group">
@@ -114,7 +121,7 @@ and open the template in the editor.
                             </div>
                         </div>
                     </div>
-                   
+
                     <h3>Employee Details</h3>
                     <div class="col-lg-12" style="margin-bottom: 10px;" >
                         <div class="col-lg-6" >
@@ -159,7 +166,7 @@ and open the template in the editor.
 
                         </div>
                     </div>
-                    
+
                     <h3>Present Contact Details</h3>
                     <div class="col-lg-12" style="margin-bottom: 10px;" >
                         <div class="col-lg-6" >

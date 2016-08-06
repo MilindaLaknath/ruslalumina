@@ -33,13 +33,13 @@ $contact = (isset($_POST['contactNumber']) ? $_POST['contactNumber'] : '');
 $information = (isset($_POST['information']) ? $_POST['information'] : '');
 
 
-$query = "INSERT INTO stdDetails (ssurname, othername, initials, gender, dob, regNo, department, degree, admission, "
+$query = "INSERT INTO stdDetails (surname, othername, initials, gender, dob, regNo, department, degree, admission, "
         . "graduation, organization, designation, capacity, relevance, orgAddress, orgTpNo, salary, currentSalary, "
         . "perAddress, email, contact, information) VALUES "
         . "('" . $sname . "','" . $oname . "','" . $nameins . "','" . $gender . "','" . $dob . "','" . $regNo . "',"
         . "'" . $department . "','" . $degree . "','" . $admission. "','" . $graduation. "','" . $organization . "',"
         . "'" . $designation . "','" . $capacity. "','" . $relevance. "','" . $orgAddress . "','" . $orgTpNo . "',"
-        . "'" . $salaryStr . "','" . $salaryCur . "','" . $perAddress . "','" . $email . "','" . $contact . "','" . $information. "',)";
+        . "'" . $salaryStr . "','" . $salaryCur . "','" . $perAddress . "','" . $email . "','" . $contact . "','" . $information. "')";
 
 
 if (mysqli_query($conn, $query)) {

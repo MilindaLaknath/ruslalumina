@@ -7,9 +7,7 @@ $degree = (isset($_POST['degree']) ? $_POST['degree'] : '');
 $department = (isset($_POST['department']) ? $_POST['department'] : '');
 $regno = (isset($_POST['regno']) ? $_POST['regno'] : '');
 
-$query = "select (sname, oname, nameins, gender, dob, regNo, "
-        . "department, degree, duration, organization, designation, orgAddress, "
-        . "orgTpNo, salaryStr, salaryCur, perAddress, email, contact) FROM stdDetails WHERE checked=1";
+$query = "select * FROM stdDetails WHERE checked=1";
 
 $query.=($salary != '' ? " AND salaryStr='" . $salary . "'" : "");
 
