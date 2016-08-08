@@ -33,40 +33,70 @@ and open the template in the editor.
                             </button> <a class="navbar-brand">Search</a>
                         </div>
 
-                        <form class="navbar-form navbar-left" role="search" method="post" action="../src/loadViewData.php" >
+                        <form class="navbar-form navbar-left" role="search" action="" >
 
                             <div class="input-group">
-                                <select class="btn dropdown-toggle" id="Salary" name="salary">
+<!--                                <select class="btn dropdown-toggle" id="Salary" name="salary">
                                     <option value="" >Salary</option>
                                     <option value="20,000-30,000">20,000-30,000</option>
                                     <option value="30,000-50,000">30,000-50,000</option>
                                     <option value="50,000-75,000">50,000-75,000</option>
                                     <option value="75,000-100,000">75,000-100,000</option>
                                     <option value="100,000< above">100,000< above</option>
+                                </select>-->
+                                <select class="selectpicker" id="Salary" name="salary">
+                                    <option value="" >Salary</option>
+                                    <option value="20,000-30,000">20,000-30,000</option>
+                                    <option value="30,000-50,000">30,000-50,000</option>
+                                    <option value="50,000-75,000">50,000-75,000</option>
+                                    <option value="75,000-100,000">75,000-100,000</option>
+                                    <option value="100,000<above">100,000 above </option>
                                 </select>
                             </div>
                             <div class="input-group">
-                                <select class="btn dropdown-toggle" id="Degree" name="degree" >
-                                    <option value="">Degree</option>
+<!--                                <select class="btn dropdown-toggle" id="Degree" name="degree" >
+                                    
                                     <option value="B.Sc.degree in Applied Sciences">B.Sc.degree in Applied Sciences</option>
                                     <option value="B.Sc.degree in Information & Communication Technology">B.Sc.degree in Information & Communication Technology</option>
                                     <option value="B.Sc.degree in Applied Biology">B.Sc.degree in Applied Biology</option>
                                     <option value="B.Sc.degree in Health Promotion">B.Sc.degree in Health Promotion</option>
+                                </select>-->                                
+                                <select class="selectpicker" id="Degree" name="degree">
+                                    <option value="">Degree</option>
+                                    <option value="B.Sc.(General) Degree in Applied Sciences">B.Sc.(General) Degree in Applied Sciences</option>
+                                    <option value="B.Sc.(four-year) Degree in Applied Sciences">B.Sc.(four-year) Degree in Applied Sciences</option>
+                                    <option value="B.Sc.(four-year) Degree in Industrial Mathematics">B.Sc.(four-year) Degree in Industrial Mathematics</option>
+                                    <option value="B.Sc.(General) Degree in Information & Communication Technology">B.Sc.(General) Degree in Information & Communication Technology</option>
+                                    <option value="B.Sc.(four-year) Degree in Information & Communication Technology">B.Sc.(four-year) Degree in Information & Communication Technology</option>
+                                    <option value="B.Sc.(Special-Biodiversity Conservation) Degree in Applied Biology">B.Sc.(Special-Biodiversity Conservation) Degree in Applied Biology</option>
+                                    <option value="B.Sc.(Special-Microbiology) Degree in Applied Biology">B.Sc.(Special-Microbiology) Degree in Applied Biology</option>
+                                    <option value="B.Sc.(Special-Fisheries and Aquaculture Management) Degree in Applied Biology">B.Sc.(Special-Fisheries and Aquaculture Management) Degree in Applied Biology</option>
+                                    <option value="B.Sc.(Joint Major) Degree in Biology and Physics">B.Sc.(Joint Major) Degree in Biology and Physics</option>
+                                    <option value="B.Sc.(Joint Major) Degree in Chemistry and Physics">B.Sc.(Joint Major) Degree in Chemistry and Physics</option>
+                                    <option value="B.Sc.(Special) Degree in Chemistry">B.Sc.(Special) Degree in Chemistry</option>
+                                    <option value="B.Sc.(General) Degree in Health Promotion">B.Sc.(General) Degree in Health Promotion</option>
+                                    <option value="B.Sc.(Special) Degree in Health Promotion">B.Sc.(Special) Degree in Health Promotion</option>
                                 </select>
                             </div>
                             <div class="input-group">
-                                <select class="btn dropdown-toggle" id="Department" name="department">
+<!--                                <select class="btn dropdown-toggle" id="Department" name="department">
+                                    <option value="">Department</option>
+                                    <option value="Physical Sciences">Physical Sciences</option>
+                                    <option value="Biological Sciences">Biological Sciences</option>
+                                </select>-->
+                                <select class="selectpicker" id="Department" name="department">
                                     <option value="">Department</option>
                                     <option value="Physical Sciences">Physical Sciences</option>
                                     <option value="Biological Sciences">Biological Sciences</option>
                                 </select>
                             </div>
 
-
-                            <div class="input-group" >
-                                <input class="form-control" style="width: 300px" name="regno" type="text" placeholder="Registration Number" />
+                            <div class="input-group" style="margin: auto;" >
+                                <!--<input class="form-control" style="width: 300px" name="regno" type="text" placeholder="Registration Number" />-->
+                                <input class="form-control" name="regno" type="text" placeholder="Registration Number" />
                                 <span class="input-group-btn">
-                                    <input class="btn btn-default" style="width: 150px" type="submit" value="Search"/>
+                                    <!--<input class="btn btn-default" style="width: 150px" type="submit" value="Search"/>-->
+                                    <input class="btn btn-default" type="submit" value="Search"/>
                                 </span>
                             </div>
                         </form>
@@ -76,109 +106,136 @@ and open the template in the editor.
         </div>
 
         <!-- Details Table-->
-        <?php
-        if (isset($_SESSION["result"])) {
-            $result = $_SESSION["result"];
-            ?>
-            <div class="container-fluid" style="margin-top: 20px">
-                <div class="row">
-                    <div class="col-md-12">
-                        <table class="table table-hover">
-                            <thead>
-                                <tr>
-                                    <th>Surname</th>
-                                    <th>Other Names</th>
-                                    <th>Name With Initials</th>
-                                    <th>Gender</th>
-                                    <th>Date of Birthday</th>
-                                    <th>Registration No</th>
-                                    <th>Department</th>
-                                    <th>Degree</th>
-                                    <th>Duration</th>
-                                    <th>Organization</th>
-                                    <th>Designation</th>
-                                    <th>Organization Address</th>
-                                    <th>Organization Tel</th>
-                                    <th>Starting Salary</th>
-                                    <th>Current Salary</th>
-                                    <th>Permanent Address</th>
-                                    <th>Email</th>
-                                    <th>Contact</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <?php
-                                while ($row = mysql_fetch_assoc($result)) {
-                                    ?>
 
-                                    <tr>
-                                        <td>
-                                            <?= $row["sname"] ?>
-                                        </td>
-                                        <td>
-                                            <?= $row["oname"] ?>
-                                        </td>
-                                        <td>
-                                            <?= $row["nameins"] ?>
-                                        </td>
-                                        <td>
-                                            <?= $row["gender"] ?>
-                                        </td>
-                                        <td>
-                                            <?= $row["dob"] ?>
-                                        </td>
-                                        <td>
-                                            <?= $row["regNo"] ?>
-                                        </td>
-                                        <td>
-                                            <?= $row["department"] ?>
-                                        </td>
-                                        <td>
-                                            <?= $row["degree"] ?>
-                                        </td>
-                                        <td>
-                                            <?= $row["duration"] ?>
-                                        </td>
-                                        <td>
-                                            <?= $row["organization"] ?>
-                                        </td>
-                                        <td>
-                                            <?= $row["designation"] ?>
-                                        </td>
-                                        <td>
-                                            <?= $row["orgAddress"] ?>
-                                        </td>
-                                        <td>
-                                            <?= $row["orgTpNo"] ?>
-                                        </td>
-                                        <td>
-                                            <?= $row["salaryStr"] ?>
-                                        </td>
-                                        <td>
-                                            <?= $row["salaryCur"] ?>
-                                        </td>
-                                        <td>
-                                            <?= $row["perAddress"] ?>
-                                        </td>
-                                        <td>
-                                            <?= $row["email"] ?>
-                                        </td>
-                                        <td>
-                                            <?= $row["contact"] ?>
-                                        </td>
-                                    </tr>
-                                    <?php
-                                }
+        <div class="container-fluid" style="margin-top: 20px">
+            <div class="row">
+                <div class="col-md-12">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Surname</th>
+                                <th>Other Name</th>
+                                <th>Initials</th>
+                                <th>Gender</th>
+                                <th>Date of Birthday</th>
+                                <th>Registration No</th>
+                                <th>Department</th>
+                                <th>Degree</th>
+                                <th>Admission</th>
+                                <th>Graduation</th>
+                                <th>Organization</th>
+                                <th>Designation</th>
+                                <th>Capacity</th>
+                                <th>Relevance</th>
+                                <th>Organization Address</th>
+                                <th>Organization Tel</th>
+                                <th>Starting Salary</th>
+                                <th>Current Salary</th>
+                                <th>Permanent Address</th>
+                                <th>Email</th>
+                                <th>Contact</th>
+                                <th>Information</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php
+                            require '../src/db.php';
+
+
+                            $salary = "";
+                            $degree = "";
+                            $department = "";
+                            $regno = "";
+
+                            $salary = (isset($_GET['salary']) ? $_GET['salary'] : "");
+                            $degree = (isset($_GET['degree']) ? $_GET['degree'] : "");
+                            $department = (isset($_GET['department']) ? $_GET['department'] : "");
+                            $regno = (isset($_GET['regno']) ? $_GET['regno'] : "");
+
+                            $query = "select * from stdDetails";
+                            $result = mysqli_query($conn, $query);
+
+                            while ($row = mysqli_fetch_assoc($result)) {
                                 ?>
-                            </tbody>
-                        </table>
-                    </div>
+
+                                <tr>
+                                    <td>
+                                        <?= $row["surname"] ?>
+                                    </td>
+                                    <td>
+                                        <?= $row["othername"] ?>
+                                    </td>
+                                    <td>
+                                        <?= $row["initials"] ?>
+                                    </td>
+                                    <td>
+                                        <?= $row["gender"] ?>
+                                    </td>
+                                    <td>
+                                        <?= $row["dob"] ?>
+                                    </td>
+                                    <td>
+                                        <?= $row["regNo"] ?>
+                                    </td>
+                                    <td>
+                                        <?= $row["department"] ?>
+                                    </td>
+                                    <td>
+                                        <?= $row["degree"] ?>
+                                    </td>
+                                    <td>
+                                        <?= $row["admission"] ?>
+                                    </td>
+                                    <td>
+                                        <?= $row["graduation"] ?>
+                                    </td>
+                                    <td>
+                                        <?= $row["organization"] ?>
+                                    </td>
+                                    <td>
+                                        <?= $row["designation"] ?>
+                                    </td>
+                                    <td>
+                                        <?= $row["capacity"] ?>
+                                    </td>
+                                    <td>
+                                        <?= $row["relevance"] ?>
+                                    </td>
+                                    <td>
+                                        <?= $row["orgAddress"] ?>
+                                    </td>
+                                    <td>
+                                        <?= $row["orgTpNo"] ?>
+                                    </td>
+                                    <td>
+                                        <?= $row["salary"] ?>
+                                    </td>
+                                    <td>
+                                        <?= $row["currentSalary"] ?>
+                                    </td>
+                                    <td>
+                                        <?= $row["perAddress"] ?>
+                                    </td>
+                                    <td>
+                                        <?= $row["email"] ?>
+                                    </td>
+                                    <td>
+                                        <?= $row["contact"] ?>
+                                    </td>
+                                    <td>
+                                        <?= $row["information"] ?>
+                                    </td>
+                                </tr>
+                                <?php
+                            }
+                            ?>
+                        </tbody>
+                    </table>
                 </div>
             </div>
+        </div>
 
-            <?php
-        }
-        ?>
+
 
     </body>
 </html>
