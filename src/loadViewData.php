@@ -9,7 +9,7 @@ $regno = (isset($_POST['regno']) ? $_POST['regno'] : '');
 
 $query = "select * FROM stdDetails WHERE checked=1";
 
-$query.=($salary != '' ? " AND salaryStr='" . $salary . "'" : "");
+ $query.=($salary != '' ? " AND salaryStr='" . $salary . "'" : "");
 
 $query.=($degree != '' ? " AND salaryStr='" . $degree . "'" : "");
 

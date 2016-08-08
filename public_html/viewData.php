@@ -91,7 +91,7 @@ and open the template in the editor.
                                 </select>
                             </div>
 
-                            <div class="input-group" style="margin: auto;" >
+                            <div class="input-group">
                                 <!--<input class="form-control" style="width: 300px" name="regno" type="text" placeholder="Registration Number" />-->
                                 <input class="form-control" name="regno" type="text" placeholder="Registration Number" />
                                 <span class="input-group-btn">
@@ -152,7 +152,21 @@ and open the template in the editor.
                             $department = (isset($_GET['department']) ? $_GET['department'] : "");
                             $regno = (isset($_GET['regno']) ? $_GET['regno'] : "");
 
-                            $query = "select * from stdDetails";
+                            $query = "select * FROM stdDetails WHERE checked=1";
+
+                            if ($salary != "") {
+                                $query=$query." AND salary LIKE '" . $salary . "'";
+                            }
+                            if ($degree != "") {
+                                $query=$query." AND degree LIKE '" . $degree . "'";
+                            }
+                            if ($department != "") {
+                                $query=$query." AND department='" . $department . "'";
+                            }
+                            if ($regno != "") {
+                                $query=$query." AND regNo='" . $regno . "'";
+                            }
+
                             $result = mysqli_query($conn, $query);
 
                             while ($row = mysqli_fetch_assoc($result)) {
