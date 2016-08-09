@@ -155,16 +155,16 @@ and open the template in the editor.
                             $query = "select * FROM stdDetails WHERE checked=1";
 
                             if ($salary != "") {
-                                $query=$query." AND salary LIKE '" . $salary . "'";
+                                $query = $query . " AND salary LIKE '" . $salary . "'";
                             }
                             if ($degree != "") {
-                                $query=$query." AND degree LIKE '" . $degree . "'";
+                                $query = $query . " AND degree LIKE '" . $degree . "'";
                             }
                             if ($department != "") {
-                                $query=$query." AND department='" . $department . "'";
+                                $query = $query . " AND department='" . $department . "'";
                             }
                             if ($regno != "") {
-                                $query=$query." AND regNo='" . $regno . "'";
+                                $query = $query . " AND regNo='" . $regno . "'";
                             }
 
                             $result = mysqli_query($conn, $query);
@@ -189,7 +189,9 @@ and open the template in the editor.
                                         <?= $row["dob"] ?>
                                     </td>
                                     <td>
-                                        <?= $row["regNo"] ?>
+                                        <a href="individuals.php?id=<?= $row["idstdDetails"] ?>" target="_blank">
+                                            <?= $row["regNo"] ?>
+                                        </a>
                                     </td>
                                     <td>
                                         <?= $row["department"] ?>
